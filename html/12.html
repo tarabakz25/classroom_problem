@@ -1,67 +1,57 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
-  <style>
-  .footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #111;
-  color: #fff;
-  padding: 20px;
-  flex-wrap: wrap;
-  font-size: 14px;
-}
-
-/* リンクの基本スタイル */
-.footer a {
-  color: #ccc;
-  margin-left: 15px;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 <body>
-  <footer class="footer">
-    <div class="footer-left">
-      <p>© 2025 YourSite Inc.</p>
-    </div>
-    <div class="footer-right">
-      <a href="https://www.nyan.cat/">利用規約</a>
-      <a href="https://www.nyan.cat/">お問い合わせ</a>
-    </div>
-  </footer>
+  <div class="chat-box">
+    <ul>
+      <li>教員：<span class="teacher">こんにちは</span></li>
+      <li>生徒：<span class="student">ぱわ</span></li>
+      <li>教員：<span class="teacher">今日は晴れですね</span></li>
+      <li>生徒：<span class="student">えぇえ？</span></li>
+    </ul>
+  </div>
 </body>
-
 <style>
-    * {
-        margin: 0;
-    }
-    .footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #111;
-        color: #fff;
-        padding: 20px;
-    }
-    .footer-left {
-        display: flex;
-        align-items: center;
-    }
-    .footer-right {
-        display: flex;
-        align-items: center;
-    }
-    .footer a {
-        color: #ccc;
-        text-decoration: none;
-        margin-left: 20px;
-        transition: color 0.3s;
-    }
-    .footer a:hover {
-        color: #fff;
-    }
+  body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .chat-box {
+    width: 300px;
+    height: 400px;
+    overflow-y: auto;
+    background-color: #f98;
+    padding: 20px;
+  } 
+  .chat-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 50px;
+  }
+
+  .chat-box ul li span {
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 10px;
+    display: inline-block;
+  }
+  .chat-box ul li span.teacher {
+    background-color: #000;
+    color: #fff;
+  }
+  .chat-box ul li span.student {
+    background-color: #f54;
+    color: #000;
+  }
 </style>
 </html>
