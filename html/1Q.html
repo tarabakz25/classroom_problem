@@ -4,40 +4,52 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>ECShoping!</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+		<style>
+			body {
+				font-family: 'Noto Sans JP', sans-serif;
+			}
+		</style>
 	</head>
-	<body>
+	<body class="m-0 p-0">
 		<div class="header">
-			<div class="announcement">
-				<p>最終クリアランス:最大20%オフ<span class="cross"></span></p>
+			<div class="mb-2 font-light h-10 flex items-center justify-center bg-black text-white">
+				<p>最終クリアランス:最大20%オフ<span class="relative inline-block w-4 h-4 ml-1 cursor-pointer before:content-[''] before:absolute before:top-[55%] before:left-0 before:w-[70%] before:h-0.5 before:bg-gray-500 before:rotate-45 after:content-[''] after:absolute after:top-[55%] after:left-0 after:w-[70%] after:h-0.5 after:bg-gray-500 after:-rotate-45"></span></p>
 			</div>
-			<div class="main-area">
+			<div class="mb-2 w-[calc(100%-10px)] px-4 py-1 flex items-center justify-between box-border overflow-hidden">
 				<img src="./logo.png" alt="logo" width="65" />
 				<div class="header-items">
-					<ul>
-						<li><img src="./help.png" alt="help" width="20" /></li>
-						<li>
-							<img src="./account.png" alt="account" width="20" />
+					<ul class="flex items-center gap-4 list-none">
+						<li class="list-none"><img src="./help.png" alt="help" width="20" class="align-middle" /></li>
+						<li class="list-none">
+							<img src="./account.png" alt="account" width="20" class="align-middle" />
 						</li>
-						<li>
+						<li class="list-none">
 							<img
 								src="./favorite.png"
 								alt="favorite"
 								width="20"
+								class="align-middle"
 							/>
+						</li>
+						<li class="list-none">
+							<img
+								src="./cart.png"
+								class="align-middle relative -top-0.5"
+								alt="cart"
+								width="18"
+							/>
+						</li>
+						<li class="list-none"><span class="text-lg relative">(0)</span></li>
+						<li class="list-none">
+							<span class="text-lg relative">日本 JPY(¥)</span
+							>
 						</li>
 						<li>
 							<img
-								src="./cart.png"
-								class="cart-icon"
-								alt="cart"
-								width="18"
-							/><span>(0)</span>
-						</li>
-						<li>
-							<span>日本 JPY(¥)</span
-							><img
 								src="./chevron-down.png"
-								class="chevron-icon"
+								class="align-middle relative -top-0.5"
 								alt="chevron-down"
 								width="10"
 							/>
@@ -45,332 +57,265 @@
 					</ul>
 				</div>
 			</div>
-			<div class="menu-frame">
+			<div class="text-heading-six border-t border-gray-300 flex items-center justify-between px-4 py-2.5">
 				<div class="menu-items">
-					<ul>
-						<li>ショップ</li>
-						<li>ブログ</li>
-						<li>コレクション</li>
-						<li>まとめ</li>
+					<ul class="flex items-center gap-4">
+						<li class="list-none">ショップ</li>
+						<li class="list-none">ブログ</li>
+						<li class="list-none">コレクション</li>
+						<li class="list-none">まとめ</li>
 					</ul>
 				</div>
-				<div class="search-frame">
+				<div class="flex items-center gap-1">
 					<p>検索</p>
 					<img src="./search.png" alt="search" width="20" />
 				</div>
 			</div>
 		</div>
 		<div class="main-container">
-			<div class="promobox">
+			<div class="w-full h-full relative">
 				<img
 					src="https://github.com/kzmSuzuki/webPropramming1_1Q/blob/main/src/img/top.jpg?raw=true"
-					class="promo-img"
+					class="h-[500px] object-cover object-center w-full block"
 					alt="bg"
 				/>
-				<div class="promotext">
-					<p style="font-size: var(--heading-five); color: #858585">
+				<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center gap-2.5">
+					<p class="text-heading-five text-gray-500">
 						オンラインショップ限定
 					</p>
-					<p style="font-size: var(--heading-two)">
+					<p class="text-heading-two">
 						ラストクリアランス
 					</p>
-					<p
-						style="
-							font-size: var(--heading-four);
-							margin-bottom: 20px;
-						"
-					>
+					<p class="text-heading-four mb-5">
 						30-80% off
 					</p>
-					<div class="promobtn">
-						<p>ウィメンズ</p>
-						<p>メンズ</p>
+					<div class="flex items-center justify-center h-9 gap-4">
+						<p class="text-heading-six w-56 h-9 bg-white flex items-center justify-center border border-black">ウィメンズ</p>
+						<p class="text-heading-six w-56 h-9 bg-white flex items-center justify-center border border-black">メンズ</p>
 					</div>
 				</div>
 			</div>
-			<div class="blogbox">
-				<div class="blogcontainer">
+			<div class="mx-4 my-2.5 flex items-center justify-center gap-4">
+				<div class="w-80 bg-gray-100 rounded-lg">
 					<img
 						src="https://s3-alpha-sig.figma.com/img/7f6f/faf7/bf0523dc217fabadb86074c3bb668041?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=IP1Zv1RZ7S8tFobY~3PGgbZz8t1rlhlvLigJlZf2UmW0BnkBbBHzUP8XBCjfFdvZEy85zZe2uA8~ZGNouhMY58obi87CdMlF8i5JSWAjSkopzcDnKrTSwm3b4uF~k5r3kpJj0hMKmlMvoEHbAjB827ry3YkGg1nhhJHSdwiEUH6dE~0rMCofB~Yht~QWdySshE6huZ5jSmdmEyNGvnCaW~M4jmbElAulJwsmFkuv2t3ZEcGn9xqjPHigp6nEhsFTKr234sYuXtrJRVTSdC35NHVcthVpYMBJdi5POwprChvCrT4ub6QktMmLKjtK09f28E8sGIuuvviOjZAkTtbn~Q__"
 						alt=""
-						class="blog-img"
+						class="w-full h-full object-cover object-center rounded-lg"
 					/>
-					<p class="blog-title">タイトル</p>
-					<p class="blog-date">2008/02/25</p>
+					<p class="text-heading-four font-semibold">タイトル</p>
+					<p class="text-heading-six">2008/02/25</p>
 				</div>
-				<div class="blogcontainer">
+				<div class="w-80 bg-gray-100 rounded-lg">
 					<img
 						src="https://s3-alpha-sig.figma.com/img/7f6f/faf7/bf0523dc217fabadb86074c3bb668041?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=IP1Zv1RZ7S8tFobY~3PGgbZz8t1rlhlvLigJlZf2UmW0BnkBbBHzUP8XBCjfFdvZEy85zZe2uA8~ZGNouhMY58obi87CdMlF8i5JSWAjSkopzcDnKrTSwm3b4uF~k5r3kpJj0hMKmlMvoEHbAjB827ry3YkGg1nhhJHSdwiEUH6dE~0rMCofB~Yht~QWdySshE6huZ5jSmdmEyNGvnCaW~M4jmbElAulJwsmFkuv2t3ZEcGn9xqjPHigp6nEhsFTKr234sYuXtrJRVTSdC35NHVcthVpYMBJdi5POwprChvCrT4ub6QktMmLKjtK09f28E8sGIuuvviOjZAkTtbn~Q__"
 						alt=""
-						class="blog-img"
+						class="w-full h-full object-cover object-center rounded-lg"
 					/>
-					<p class="blog-title">タイトル</p>
-					<p class="blog-date">2008/02/25</p>
+					<p class="text-heading-four font-semibold">タイトル</p>
+					<p class="text-heading-six">2008/02/25</p>
 				</div>
-				<div class="blogcontainer">
+				<div class="w-80 bg-gray-100 rounded-lg">
 					<img
 						src="https://s3-alpha-sig.figma.com/img/7f6f/faf7/bf0523dc217fabadb86074c3bb668041?Expires=1745798400&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=IP1Zv1RZ7S8tFobY~3PGgbZz8t1rlhlvLigJlZf2UmW0BnkBbBHzUP8XBCjfFdvZEy85zZe2uA8~ZGNouhMY58obi87CdMlF8i5JSWAjSkopzcDnKrTSwm3b4uF~k5r3kpJj0hMKmlMvoEHbAjB827ry3YkGg1nhhJHSdwiEUH6dE~0rMCofB~Yht~QWdySshE6huZ5jSmdmEyNGvnCaW~M4jmbElAulJwsmFkuv2t3ZEcGn9xqjPHigp6nEhsFTKr234sYuXtrJRVTSdC35NHVcthVpYMBJdi5POwprChvCrT4ub6QktMmLKjtK09f28E8sGIuuvviOjZAkTtbn~Q__"
 						alt=""
-						class="blog-img"
+						class="w-full h-full object-cover object-center rounded-lg"
 					/>
-					<p class="blog-title">タイトル</p>
-					<p class="blog-date">2008/02/25</p>
+					<p class="text-heading-four font-semibold">タイトル</p>
+					<p class="text-heading-six">2008/02/25</p>
 				</div>
 			</div>
 		</div>
-		<div class="collections">
-			<h2>コレクションズ</h2>
-			<div class="collection-container">
-				<img
-					src="https://github.com/kzmSuzuki/webPropramming1_1Q/blob/main/src/img/collections1.jpg?raw=true"
-					alt=""
-				/>
+		<div class="p-8">
+			<h2 class="text-2xl text-center my-4">コレクションズ</h2>
+			<div class="flex gap-4">
+				<div class="w-1/4>
+					<img src="https://github.com/kzmSuzuki/webPropramming1_1Q/blob/main/src/img/collections1.jpg?raw=true" alt="collections1" class="w-full h-1/2 object-cover">
+					<div class="flex flex-col">
+						<p class="text-gray-500 text-sm">MISEル</p>
+						<h2>サングラス</h2>
+						<h2 class="text-2xl">¥10,000</h2>
+					</div>
+					<div class="flex gap-1 my-2">
+						<div class="w-6 h-6 rounded-full bg-[#191970]"></div>
+						<div class="w-6 h-6 rounded-full bg-[#FFDEAD]"></div>
+						<div class="w-6 h-6 rounded-full bg-[#FEF1F5]"></div>
+						<div class="w-6 h-6 rounded-full bg-[#FFA07A]"></div>
+						<div class="w-6 h-6 rounded-full bg-[#B8860E]"></div>
+						<div class="w-6 h-6 rounded-full bg-[#8FBC8F]"></div>
+					</div>
+					<div class="flex gap-2 my-2">
+						<div class="border border-black px-2 py-1">S</div>
+						<div class="border border-gray-400 px-2 py-1 text-gray-400">M</div>
+						<div class="border border-gray-400 px-1 py-1 text-gray-400">XL</div>
+					</div>
+					<div class="flex gap-2 my-2 justify-center">
+						<div class="border border-gray-400 px-2 py-1">-</div>
+						<div class="border border-gray-400 bg-gray-200 text-gray-500 px-5 py-1">1</div>
+						<div class="border border-gray-400 px-2 py-1">+</div>
+					</div>
+					<div class="flex gap-2">
+						<p class="border border-black px-5 py-2 text-xs">カートに入れる</p>
+						<img src="https://raw.githubusercontent.com/kzmSuzuki/webPropramming1_1Q/d72c522480320dde15543e2e624df7a4cf36c842/src/icon/icon-favorite.svg" alt="">
+						<img src="https://raw.githubusercontent.com/kzmSuzuki/webPropramming1_1Q/d72c522480320dde15543e2e624df7a4cf36c842/src/icon/icon-compare.svg" alt="">
+					</div>
+					<div class="flex gap-2 mt-2">
+						<img src="https://raw.githubusercontent.com/kzmSuzuki/webPropramming1_1Q/d72c522480320dde15543e2e624df7a4cf36c842/src/icon/icon-ster.svg" alt="">
+						<img src="https://raw.githubusercontent.com/kzmSuzuki/webPropramming1_1Q/d72c522480320dde15543e2e624df7a4cf36c842/src/icon/icon-ster.svg" alt="">
+						<img src="https://raw.githubusercontent.com/kzmSuzuki/webPropramming1_1Q/d72c522480320dde15543e2e624df7a4cf36c842/src/icon/icon-ster.svg" alt="">	
+						<img src="https://raw.githubusercontent.com/kzmSuzuki/webPropramming1_1Q/d72c522480320dde15543e2e624df7a4cf36c842/src/icon/icon-ster.svg" alt="">
+						<img src="https://raw.githubusercontent.com/kzmSuzuki/webPropramming1_1Q/d72c522480320dde15543e2e624df7a4cf36c842/src/icon/icon-ster.svg" alt="">
+					</div>
+				</div>
+				<div class="w-1/4">
+					<img src="https://github.com/kzmSuzuki/webPropramming1_1Q/blob/main/src/img/collections2.jpg?raw=true" alt="collections1" class="w-full h-1/2 object-cover">
+					<div class="flex flex-col">
+						<p class="text-gray-500 text-sm">MISEル</p>
+						<h2>ルーズフィットジーンズ</h2>
+						<h2 class="text-2xl">¥40,000</h2>
+					</div>
+					<div class="flex gap-1 my-2">
+						<div class="w-6 h-6 rounded-full bg-[#191970]"></div>
+						<div class="w-6 h-6 rounded-full bg-[#FFDEAD]"></div>
+						<div class="w-6 h-6 rounded-full bg-[#FEF1F5]"></div>
+						<div class="w-6 h-6 rounded-full bg-[#FFA07A]"></div>
+						<div class="w-6 h-6 rounded-full bg-[#B8860E]"></div>
+						<div class="w-6 h-6 rounded-full bg-[#8FBC8F]"></div>
+					</div>
+					<div class="flex gap-2 my-2">
+						<div class="border border-black px-2 py-1">S</div>
+						<div class="border border-gray-400 px-2 py-1 text-gray-400">M</div>
+						<div class="border border-gray-400 px-1 py-1 text-gray-400">XL</div>
+					</div>
+					<div class="flex gap-2 my-2 justify-center">
+						<div class="border border-gray-400 px-2 py-1">-</div>
+						<div class="border border-gray-400 bg-gray-200 text-gray-500 px-5 py-1">1</div>
+						<div class="border border-gray-400 px-2 py-1">+</div>
+					</div>
+					<div class="flex gap-2">
+						<p class="border border-black px-5 py-2 text-xs">カートに入れる</p>
+						<img src="https://raw.githubusercontent.com/kzmSuzuki/webPropramming1_1Q/d72c522480320dde15543e2e624df7a4cf36c842/src/icon/icon-favorite.svg" alt="">
+						<img src="https://raw.githubusercontent.com/kzmSuzuki/webPropramming1_1Q/d72c522480320dde15543e2e624df7a4cf36c842/src/icon/icon-compare.svg" alt="">
+					</div>
+					<div class="flex gap-2 mt-2">
+						<img src="https://raw.githubusercontent.com/kzmSuzuki/webPropramming1_1Q/d72c522480320dde15543e2e624df7a4cf36c842/src/icon/icon-ster.svg" alt="">
+						<img src="https://raw.githubusercontent.com/kzmSuzuki/webPropramming1_1Q/d72c522480320dde15543e2e624df7a4cf36c842/src/icon/icon-ster.svg" alt="">
+						<img src="https://raw.githubusercontent.com/kzmSuzuki/webPropramming1_1Q/d72c522480320dde15543e2e624df7a4cf36c842/src/icon/icon-ster.svg" alt="">	
+						<img src="https://raw.githubusercontent.com/kzmSuzuki/webPropramming1_1Q/d72c522480320dde15543e2e624df7a4cf36c842/src/icon/icon-ster.svg" alt="">
+						<img src="https://raw.githubusercontent.com/kzmSuzuki/webPropramming1_1Q/d72c522480320dde15543e2e624df7a4cf36c842/src/icon/icon-ster.svg" alt="">
+					</div>
+				</div>
+				<div class="w-1/4">
+					<img src="https://github.com/kzmSuzuki/webPropramming1_1Q/blob/main/src/img/collections3.jpg?raw=true" alt="collections1" class="w-full h-1/2 object-cover">
+					<div class="flex flex-col">
+						<p class="text-gray-500 text-sm">MISEル</p>
+						<h2>ニットウェア</h2>
+						<h2 class="text-2xl">¥30,000</h2>
+					</div>
+					<div class="flex gap-1 my-2">
+						<div class="w-6 h-6 rounded-full bg-[#191970]"></div>
+						<div class="w-6 h-6 rounded-full bg-[#FFDEAD]"></div>
+						<div class="w-6 h-6 rounded-full bg-[#FEF1F5]"></div>
+						<div class="w-6 h-6 rounded-full bg-[#FFA07A]"></div>
+						<div class="w-6 h-6 rounded-full bg-[#B8860E]"></div>
+						<div class="w-6 h-6 rounded-full bg-[#8FBC8F]"></div>
+					</div>
+					<div class="flex gap-2 my-2">
+						<div class="border border-black px-2 py-1">S</div>
+						<div class="border border-gray-400 px-2 py-1 text-gray-400">M</div>
+						<div class="border border-gray-400 px-1 py-1 text-gray-400">XL</div>
+					</div>
+					<div class="flex gap-2 my-2 justify-center">
+						<div class="border border-gray-400 px-2 py-1">-</div>
+						<div class="border border-gray-400 bg-gray-200 text-gray-500 px-5 py-1">1</div>
+						<div class="border border-gray-400 px-2 py-1">+</div>
+					</div>
+					<div class="flex gap-2">
+						<p class="border border-black px-5 py-2 text-xs">カートに入れる</p>
+						<img src="https://raw.githubusercontent.com/kzmSuzuki/webPropramming1_1Q/d72c522480320dde15543e2e624df7a4cf36c842/src/icon/icon-favorite.svg" alt="">
+						<img src="https://raw.githubusercontent.com/kzmSuzuki/webPropramming1_1Q/d72c522480320dde15543e2e624df7a4cf36c842/src/icon/icon-compare.svg" alt="">
+					</div>
+					<div class="flex gap-2 mt-2">
+						<img src="https://raw.githubusercontent.com/kzmSuzuki/webPropramming1_1Q/d72c522480320dde15543e2e624df7a4cf36c842/src/icon/icon-ster.svg" alt="">
+						<img src="https://raw.githubusercontent.com/kzmSuzuki/webPropramming1_1Q/d72c522480320dde15543e2e624df7a4cf36c842/src/icon/icon-ster.svg" alt="">
+						<img src="https://raw.githubusercontent.com/kzmSuzuki/webPropramming1_1Q/d72c522480320dde15543e2e624df7a4cf36c842/src/icon/icon-ster.svg" alt="">	
+						<img src="https://raw.githubusercontent.com/kzmSuzuki/webPropramming1_1Q/d72c522480320dde15543e2e624df7a4cf36c842/src/icon/icon-ster.svg" alt="">
+						<img src="https://raw.githubusercontent.com/kzmSuzuki/webPropramming1_1Q/d72c522480320dde15543e2e624df7a4cf36c842/src/icon/icon-ster.svg" alt="">
+					</div>
+				</div>
+				<div class="w-1/4">
+					<img src="https://github.com/kzmSuzuki/webPropramming1_1Q/blob/main/src/img/collections4.jpg?raw=true" alt="collections1" class="w-full h-1/2 object-cover">
+					<div class="flex flex-col">
+						<p class="text-gray-500 text-sm">MISEル</p>
+						<h2>ダウンベスト</h2>
+						<h2 class="text-2xl">¥50,000</h2>
+					</div>
+					<div class="flex gap-1 my-2">
+						<div class="w-6 h-6 rounded-full bg-[#191970]"></div>
+						<div class="w-6 h-6 rounded-full bg-[#FFDEAD]"></div>
+						<div class="w-6 h-6 rounded-full bg-[#FEF1F5]"></div>
+						<div class="w-6 h-6 rounded-full bg-[#FFA07A]"></div>
+						<div class="w-6 h-6 rounded-full bg-[#B8860E]"></div>
+						<div class="w-6 h-6 rounded-full bg-[#8FBC8F]"></div>
+					</div>
+					<div class="flex gap-2 my-2">
+						<div class="border border-black px-2 py-1">S</div>
+						<div class="border border-gray-400 px-2 py-1 text-gray-400">M</div>
+						<div class="border border-gray-400 px-1 py-1 text-gray-400">XL</div>
+					</div>
+					<div class="flex gap-2 my-2 justify-center">
+						<div class="border border-gray-400 px-2 py-1">-</div>
+						<div class="border border-gray-400 bg-gray-200 text-gray-500 px-5 py-1">1</div>
+						<div class="border border-gray-400 px-2 py-1">+</div>
+					</div>
+					<div class="flex gap-2">
+						<p class="border border-black px-5 py-2 text-xs">カートに入れる</p>
+						<img src="https://raw.githubusercontent.com/kzmSuzuki/webPropramming1_1Q/d72c522480320dde15543e2e624df7a4cf36c842/src/icon/icon-favorite.svg" alt="">
+						<img src="https://raw.githubusercontent.com/kzmSuzuki/webPropramming1_1Q/d72c522480320dde15543e2e624df7a4cf36c842/src/icon/icon-compare.svg" alt="">
+					</div>
+					<div class="flex gap-2 mt-2">
+						<img src="https://raw.githubusercontent.com/kzmSuzuki/webPropramming1_1Q/d72c522480320dde15543e2e624df7a4cf36c842/src/icon/icon-ster.svg" alt="">
+						<img src="https://raw.githubusercontent.com/kzmSuzuki/webPropramming1_1Q/d72c522480320dde15543e2e624df7a4cf36c842/src/icon/icon-ster.svg" alt="">
+						<img src="https://raw.githubusercontent.com/kzmSuzuki/webPropramming1_1Q/d72c522480320dde15543e2e624df7a4cf36c842/src/icon/icon-ster.svg" alt="">	
+						<img src="https://raw.githubusercontent.com/kzmSuzuki/webPropramming1_1Q/d72c522480320dde15543e2e624df7a4cf36c842/src/icon/icon-ster.svg" alt="">
+						<img src="https://raw.githubusercontent.com/kzmSuzuki/webPropramming1_1Q/d72c522480320dde15543e2e624df7a4cf36c842/src/icon/icon-ster.svg" alt="">
+					</div>
+				</div>
+			</div>
+			<p class="text-center text-white bg-black w-2/5 mx-auto py-5">全てのコレクションを見る</p>
+		</div>
+		<div class="flex gap-10 justify-center">
+			<div class="relative w-64 h-64">
+				<img src="https://github.com/kzmSuzuki/webPropramming1_1Q/blob/main/src/img/womens.jpg?raw=true" alt="" class="object-cover w-full h-full">
+				<p class="absolute inset-0 flex items-end justify-center">ウィメンズ</p>
+			</div>
+			<div class="relative w-64 h-64">
+				<img src="https://github.com/kzmSuzuki/webPropramming1_1Q/blob/main/src/img/mens.jpg?raw=true" alt="" class="object-cover w-full h-full">
+				<p class="absolute inset-0 flex items-end justify-center">メンズ</p>
+			</div>
+			<div class="relative w-64 h-64">
+				<img src="https://github.com/kzmSuzuki/webPropramming1_1Q/blob/main/src/img/goods.jpg?raw=true" alt="" class="object-cover w-full h-full">
+				<p class="absolute inset-0 flex items-end justify-center">グッズ</p>
+			</div>
+		</div>
+		<div class="flex justify-center gap-10 mt-10">
+			<div class="w-1/2 h-64 relative">
+				<img src="https://github.com/kzmSuzuki/webPropramming1_1Q/blob/main/src/img/color.jpg?raw=true" alt="" class="w-full h-full object-cover">
+			</div>
+			<div class="w-1/2 h-64 relative">
+				<img src="https://github.com/kzmSuzuki/webPropramming1_1Q/blob/main/src/img/colaboration.jpg?raw=true" alt="" class="w-full h-full object-cover">
+			</div>
+		</div>
+		<div class="flex flex-col justify-center">
+			<p class="text-center text-xl my-10">記事カルーセル</p>
+			<div class="flex justify-center">
+				<div class="w-1/3 flex items-center gap-2">
+					<img src="https://github.com/kzmSuzuki/webPropramming1_1Q/blob/main/src/img/2025SpringSummer.jpg?raw=true" alt="" class="w-full h-1/3 object-cover">
+					<p>2025春夏コレクション</p>
+				</div>
 				<div>
-					<p>MISEル</p>
-					<p>サングラス</p>
-					<p>¥10,000</p>
-					<div>
-						<div class="circle-color1"></div>
-						<div class="circle-color2"></div>
-						<div class="circle-color3"></div>
-						<div class="circle-color4"></div>
-						<div class="circle-color5"></div>
-						<div class="circle-color6"></div>
-					</div>
-					<div class="size">
-						<p>S</p>
-						<p>M</p>
-						<p>XL</p>
-					</div>
-					<div class="add-amount">
-						<p>-</p>
-						<p>1</p>
-						<p>+</p>
-					</div>
-					<div class="add-cart">
-						<p>カートに追加</p>
-						<img
-							src="https://raw.githubusercontent.com/kzmSuzuki/webPropramming1_1Q/6e358e4f406bd598f2fa2ed3951c5f08f2c07a4b/src/icon/icon-favorite.svg"
-							alt=""
-						/>
-						<svg
-							width="24"
-							height="22"
-							viewBox="0 0 24 22"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<path
-								d="M23.288 18.722C23.278 18.729 23.264 18.734 23.253 18.7421L18.978 6.63208L18.983 6.61804L18.972 6.61401L18.858 6.29102V6.22998H12.464V1.47998C12.464 1.31104 12.402 1.16504 12.278 1.04102C12.154 0.916992 12.007 0.85498 11.839 0.85498C11.671 0.85498 11.524 0.916992 11.4 1.04102C11.276 1.16504 11.214 1.31201 11.214 1.47998V6.22998H4.81897V6.29199L4.70497 6.61401L4.69397 6.61804L4.69897 6.63208L0.423965 18.741C0.413971 18.734 0.398972 18.729 0.388977 18.7211L0.000976562 19.802C1.34598 20.6481 3.20398 21.165 5.28697 21.165C7.36697 21.165 9.22197 20.65 10.566 19.806L10.547 19.7521L10.567 19.745L6.20598 7.396H11.838H17.47L13.11 19.745L13.13 19.7521L13.111 19.806C14.455 20.65 16.31 21.165 18.39 21.165C20.473 21.165 22.331 20.6481 23.676 19.802L23.288 18.722ZM9.16597 19.285C8.08098 19.771 6.73198 20.066 5.28598 20.066C3.86298 20.066 2.53697 19.7781 1.46097 19.3051L1.78697 18.381H8.84697L9.16597 19.285ZM8.45598 17.272H2.17897L5.31697 8.38403L8.45598 17.272ZM18.359 8.38403L21.497 17.272H15.221L18.359 8.38403ZM18.39 20.066C16.944 20.066 15.594 19.771 14.51 19.285L14.829 18.381H21.889L22.215 19.3051C21.139 19.7781 19.813 20.066 18.39 20.066Z"
-								fill="#141414"
-							/>
-						</svg>
-					</div>
-					<div class="star-container">
-						<img
-							src="https://raw.githubusercontent.com/kzmSuzuki/webPropramming1_1Q/e28c2d410332608bd7f651b630d2362396bfe03f/src/icon/icon-ster.svg"
-							alt=""
-						/>
-						<img
-							src="https://raw.githubusercontent.com/kzmSuzuki/webPropramming1_1Q/e28c2d410332608bd7f651b630d2362396bfe03f/src/icon/icon-ster.svg"
-							alt=""
-						/>
-						<img
-							src="https://raw.githubusercontent.com/kzmSuzuki/webPropramming1_1Q/e28c2d410332608bd7f651b630d2362396bfe03f/src/icon/icon-ster.svg"
-							alt=""
-						/>
-						<img
-							src="https://raw.githubusercontent.com/kzmSuzuki/webPropramming1_1Q/e28c2d410332608bd7f651b630d2362396bfe03f/src/icon/icon-ster.svg"
-							alt=""
-						/>
-						<img
-							src="https://raw.githubusercontent.com/kzmSuzuki/webPropramming1_1Q/e28c2d410332608bd7f651b630d2362396bfe03f/src/icon/icon-ster.svg"
-							alt=""
-						/>
-					</div>
+					
 				</div>
 			</div>
 		</div>
-		<div class="footer"></div>
 	</body>
 </html>
-
-<style>
-	:root {
-		--heading-one: 44px;
-		--heading-two: 32px;
-		--heading-three: 24px;
-		--heading-four: 18px;
-		--heading-five: 18px;
-		--heading-six: 13px;
-	}
-
-	* {
-		margin: 0;
-		padding: 0;
-		font-family: "Noto Sans JP", sans-serif;
-	}
-	.header .announcement {
-		margin-bottom: 7px;
-		font-family: "Hiragino Sans";
-		font-weight: 200;
-		height: 40px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background-color: #000;
-		color: #fff;
-	}
-	.header .announcement .cross {
-		position: relative;
-		display: inline-block;
-		width: 15px;
-		height: 15px;
-		margin-left: 5px;
-		cursor: pointer;
-	}
-
-	.header .announcement .cross::before,
-	.header .announcement .cross::after {
-		content: "";
-		position: absolute;
-		top: 55%;
-		left: 0;
-		width: 70%;
-		height: 2px;
-		background-color: #858585;
-	}
-
-	.header .announcement .cross::before {
-		transform: rotate(45deg);
-	}
-
-	.header .announcement .cross::after {
-		transform: rotate(-45deg);
-	}
-
-	.header .main-area {
-		margin-bottom: 7px;
-		width: calc(100% - 10px);
-		padding: 4px 15px;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		box-sizing: border-box;
-		overflow: hidden;
-	}
-
-	.header .main-area .header-items ul {
-		display: flex;
-		align-items: center;
-		gap: 15px;
-	}
-	.header .main-area .header-items ul li {
-		list-style: none;
-	}
-	.header .main-area .header-items ul li img {
-		vertical-align: middle;
-	}
-	.header .main-area .header-items ul li span {
-		font-size: 18px;
-		position: relative;
-	}
-	.header .main-area .header-items ul li .cart-icon {
-		position: relative;
-		top: -2px;
-	}
-	.header .main-area .header-items ul li .chevron-icon {
-		position: relative;
-		top: -2px;
-	}
-
-	.header .menu-frame {
-		font-size: 13px;
-		border-top: 1px solid #e5e5e5;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		padding: 10px 15px;
-	}
-	.header .menu-frame .menu-items ul {
-		display: flex;
-		align-items: center;
-		gap: 15px;
-	}
-	.header .menu-frame .menu-items ul li {
-		list-style: none;
-	}
-	.header .menu-frame .search-frame {
-		display: flex;
-		align-items: center;
-		gap: 5px;
-	}
-
-	.main-container .promobox {
-		width: 100%;
-		height: 100%;
-		position: relative;
-	}
-	.main-container .promobox .promo-img {
-		height: 500px;
-		object-fit: cover;
-		object-position: center;
-		width: 100%;
-		display: block;
-	}
-	.main-container .promobox .promotext {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		align-items: center;
-		justify-content: center;
-		display: flex;
-		flex-direction: column;
-		gap: 10px;
-	}
-	.main-container .promobox .promotext .promobtn {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		height: 35px;
-		gap: 15px;
-	}
-	.main-container .promobox .promotext .promobtn p {
-		font-size: var(--heading-six);
-		width: 220px;
-		height: 35px;
-		background-color: #fff;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		border: 1px solid #000;
-	}
-	.main-container .blogbox {
-		margin: 10px 15px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		gap: 15px;
-	}
-	.main-container .blogbox .blogcontainer {
-		width: 300px;
-		background-color: #f5f5f5;
-		border-radius: 10px;
-	}
-	.main-container .blogbox .blogcontainer .blog-img {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		object-position: center;
-		border-radius: 10px;
-	}
-	.main-container .blogbox .blogcontainer .blog-title {
-		font-size: var(--heading-four);
-		font-weight: 600;
-	}
-	.main-container .blogbox .blogcontainer .blog-date {
-		font-size: var(--heading-six);
-	}
-    
-</style>
